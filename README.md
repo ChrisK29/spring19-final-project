@@ -19,3 +19,5 @@ English - Uzbek language translator & learner
 - [ ] Learn / practice saved translations (12 hrs)
 - [ ] Simple game to make learning fun (15 hrs)
 - [ ] Some settings tab with basic settings and general app information (2 hrs)
+
+### Wire-frames
