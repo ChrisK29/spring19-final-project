@@ -13,7 +13,7 @@
         <!--Translate-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Translate" id="9pv-A4-QxB" customClass="FirstViewController" customModule="iTiluz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Translate" id="9pv-A4-QxB" customClass="TranslateViewController" customModule="iTiluz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
         <!--Saved-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="Saved" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="iTiluz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Saved" id="8rJ-Kc-sve" customClass="SavedViewController" customModule="iTiluz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +106,7 @@
         <!--Settings-->
         <scene sceneID="5fO-Qr-7qd">
             <objects>
-                <viewController title="Settings" id="Cgq-fp-vrd" sceneMemberID="viewController">
+                <viewController title="Settings" id="Cgq-fp-vrd" customClass="SettingsViewController" customModule="iTiluz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4LJ-Rj-AXt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
