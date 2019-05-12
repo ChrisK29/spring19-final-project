@@ -1,6 +1,8 @@
 # SFSU CSC 690 - iOS course final project
 
-Author: Jakhongir Khusanov.
+- App name: **iTiluz**
+- Author: Jakhongir Khusanov.
+- Reviewer: [@Yordina](https://github.com/yordina)
 
 English - Uzbek language translator & learner. The app UI will be based on my own transliteration app called [Tiluz](https://github.com/jkhusanov/tiluz) created with React Native. This new native iOS app will be logical continuation of my original plan where I've wanted to create all in one platform for people who want to advance both their native and foreign language skills.
 
