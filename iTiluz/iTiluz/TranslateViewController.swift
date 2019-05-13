@@ -12,15 +12,14 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var userText: UITextView!
     
+    
     @IBOutlet weak var translatedText: UITextView!
     
-    @IBAction func translateButton(_ sender: Any) {
-        var textToTranslate = userText.text
-        
-        textToTranslate = textToTranslate?.uppercased()
-        
-        translatedText.text = textToTranslate
+    @IBAction func translateButton(_ sender: UIButton) {
+        translateText()
     }
+    
+    
     
     @IBOutlet weak var copyButton: UIButton!
     
@@ -30,11 +29,52 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         pasteboard.string = textToCopy
         
     }
+    
+    func translateText() {
+        var textToTranslate = userText.text
+        
+        textToTranslate = textToTranslate?.uppercased()
+        
+        translatedText.text = textToTranslate
+    }
+    
+    let placeholderForInput = "Enter text"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         customizeButton(buttonName: copyButton)
+        userText.delegate = self
+        userText.text = placeholderForInput
+        userText.textColor = UIColor.lightGray
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    func textViewDidBeginEditing(_ userText: UITextView) {
+        if userText.textColor == UIColor.lightGray {
+            userText.text = nil
+            userText.textColor = UIColor.init(rgb: 0x2948ff)
+            userText.font=UIFont.systemFont(ofSize: 20)
+            
+        }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            translateText()
+            return false
+        }
+        return true
+    }
+    
+    func textViewDidEndEditing(_ userText: UITextView) {
+        if userText.text.isEmpty {
+            userText.text = placeholderForInput
+            userText.textColor = UIColor.lightGray
+        }
     }
     
     func customizeButton(buttonName: UIButton) {
