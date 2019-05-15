@@ -15,11 +15,12 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var translatedText: UITextView!
     
-    @IBAction func translateButton(_ sender: UIButton) {
+    @IBAction func touchTranslateButton(_ sender: UIButton) {
         translateText()
     }
     
     
+    @IBOutlet weak var translateButton: UIButton!
     
     @IBOutlet weak var copyButton: UIButton!
     
@@ -43,7 +44,8 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        customizeButton(buttonName: copyButton)
+        customizeButton(buttonName: copyButton, imageName: "copyButton", buttonColor: 0xffffff)
+        customizeButton(buttonName: translateButton, imageName: "translateButton", buttonColor: 0x374FF5)
         userText.delegate = self
         userText.text = placeholderForInput
         userText.textColor = UIColor.lightGray
@@ -77,11 +79,11 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func customizeButton(buttonName: UIButton) {
-        let origImage = UIImage(named: "copyButton");
+    func customizeButton(buttonName: UIButton, imageName icon: String, buttonColor: Int) {
+        let origImage = UIImage(named: icon);
         let tintedImage = origImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         buttonName.setImage(tintedImage, for: .normal)
-        buttonName.tintColor = UIColor.white
+        buttonName.tintColor = UIColor(rgb: buttonColor )
     }
 }
 
