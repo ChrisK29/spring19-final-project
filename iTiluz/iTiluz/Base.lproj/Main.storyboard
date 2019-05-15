@@ -22,30 +22,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcd-Ak-jfO">
-                                        <rect key="frame" x="100" y="19" width="50" height="30"/>
+                                        <rect key="frame" x="64" y="19" width="50" height="30"/>
                                         <state key="normal" title="English"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2U-ft-nD8">
-                                        <rect key="frame" x="231" y="19" width="44" height="30"/>
-                                        <state key="normal" title="Uzbek"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwT-6N-eGb">
                                         <rect key="frame" x="172.5" y="19" width="30" height="30"/>
                                         <state key="normal" image="changeButton"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2U-ft-nD8">
+                                        <rect key="frame" x="267" y="19" width="44" height="30"/>
+                                        <state key="normal" title="Uzbek"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="pwT-6N-eGb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wcd-Ak-jfO" secondAttribute="trailing" constant="8" symbolic="YES" id="C23-Ch-i1o"/>
+                                    <constraint firstItem="pwT-6N-eGb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wcd-Ak-jfO" secondAttribute="trailing" constant="8" symbolic="YES" id="DUB-Dg-Uas"/>
                                     <constraint firstItem="wcd-Ak-jfO" firstAttribute="top" secondItem="qQC-QD-phc" secondAttribute="top" constant="19" id="VQT-KA-Eck"/>
                                     <constraint firstItem="j2U-ft-nD8" firstAttribute="top" secondItem="qQC-QD-phc" secondAttribute="top" constant="19" id="bBh-QC-Or8"/>
                                     <constraint firstAttribute="bottom" secondItem="wcd-Ak-jfO" secondAttribute="bottom" constant="19" id="bNe-69-mKg"/>
-                                    <constraint firstAttribute="trailing" secondItem="j2U-ft-nD8" secondAttribute="trailing" constant="100" id="bmz-Op-MRI"/>
+                                    <constraint firstAttribute="trailing" secondItem="j2U-ft-nD8" secondAttribute="trailing" constant="64" id="bmz-Op-MRI"/>
                                     <constraint firstItem="pwT-6N-eGb" firstAttribute="centerY" secondItem="qQC-QD-phc" secondAttribute="centerY" id="fa0-bd-rzg"/>
-                                    <constraint firstItem="wcd-Ak-jfO" firstAttribute="leading" secondItem="qQC-QD-phc" secondAttribute="leading" constant="100" id="hY8-Wd-mmH"/>
+                                    <constraint firstItem="wcd-Ak-jfO" firstAttribute="leading" secondItem="qQC-QD-phc" secondAttribute="leading" constant="64" id="hY8-Wd-mmH"/>
                                     <constraint firstAttribute="bottom" secondItem="j2U-ft-nD8" secondAttribute="bottom" constant="19" id="jae-Qc-VoU"/>
+                                    <constraint firstItem="j2U-ft-nD8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pwT-6N-eGb" secondAttribute="trailing" constant="8" symbolic="YES" id="nvw-fv-3wM"/>
                                     <constraint firstItem="pwT-6N-eGb" firstAttribute="centerX" secondItem="qQC-QD-phc" secondAttribute="centerX" id="qsS-g8-IgS"/>
-                                    <constraint firstItem="j2U-ft-nD8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pwT-6N-eGb" secondAttribute="trailing" constant="8" symbolic="YES" id="xZ2-fN-1Om"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djk-cZ-qx7">
