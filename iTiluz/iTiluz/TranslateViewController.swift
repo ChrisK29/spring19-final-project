@@ -10,8 +10,9 @@ import UIKit
 
 class TranslateViewController: UIViewController, UITextViewDelegate {
     
-    @IBOutlet weak var userText: UITextView!
+    let setLanguage = TranslateLanguage(selectedLanguage: "en", targetLanguage: "uz")
     
+    @IBOutlet weak var userText: UITextView!
     
     @IBOutlet weak var translatedText: UITextView!
     
@@ -36,11 +37,14 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     }
     
     func translateText() {
-        var textToTranslate = userText.text
+        guard var textToTranslate = userText.text else { return }
         
-        textToTranslate = textToTranslate?.uppercased()
+        textToTranslate = textToTranslate.uppercased()
         
         translatedText.text = textToTranslate
+        let GoogleUrl = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + setLanguage.selectedLanguage + "&tl=" + setLanguage.targetLanguage + "&dt=t&dt=t&q=" + textToTranslate
+        
+        print(GoogleUrl)
     }
     
     let placeholderForInput = "Enter text"

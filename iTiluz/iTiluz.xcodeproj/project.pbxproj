@@ -15,6 +15,7 @@
 		CC2B9813228898D100CE55A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2B9812228898D100CE55A4 /* Assets.xcassets */; };
 		CC2B9816228898D100CE55A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2B9814228898D100CE55A4 /* LaunchScreen.storyboard */; };
 		CC788DED2288E2C80014AFEA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC788DEC2288E2C80014AFEA /* SettingsViewController.swift */; };
+		CCAFFBBC228CBC810040E9D0 /* TranslateLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFFBBB228CBC810040E9D0 /* TranslateLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CC2B9815228898D100CE55A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC2B9817228898D100CE55A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC788DEC2288E2C80014AFEA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CCAFFBBB228CBC810040E9D0 /* TranslateLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLanguage.swift; sourceTree = "<group>"; };
 		E35087A1A014D5924EC77881 /* Pods-iTiluz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTiluz.debug.xcconfig"; path = "Target Support Files/Pods-iTiluz/Pods-iTiluz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +60,6 @@
 				E35087A1A014D5924EC77881 /* Pods-iTiluz.debug.xcconfig */,
 				9C9A35426C4AF4BFA5FEE6EC /* Pods-iTiluz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				CC2B9812228898D100CE55A4 /* Assets.xcassets */,
 				CC2B9814228898D100CE55A4 /* LaunchScreen.storyboard */,
 				CC2B9817228898D100CE55A4 /* Info.plist */,
+				CCAFFBBB228CBC810040E9D0 /* TranslateLanguage.swift */,
 			);
 			path = iTiluz;
 			sourceTree = "<group>";
@@ -216,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2B980E228898D000CE55A4 /* SavedViewController.swift in Sources */,
+				CCAFFBBC228CBC810040E9D0 /* TranslateLanguage.swift in Sources */,
 				CC2B980A228898D000CE55A4 /* AppDelegate.swift in Sources */,
 				CC2B980C228898D000CE55A4 /* TranslateViewController.swift in Sources */,
 				CC788DED2288E2C80014AFEA /* SettingsViewController.swift in Sources */,
