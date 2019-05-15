@@ -15,19 +15,23 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var translatedText: UITextView!
     
-    @IBAction func touchTranslateButton(_ sender: UIButton) {
-        translateText()
-    }
-    
-    
     @IBOutlet weak var translateButton: UIButton!
     
     @IBOutlet weak var copyButton: UIButton!
+    
+    let feedbackGenerator = UINotificationFeedbackGenerator()
+
+    
+    @IBAction func touchTranslateButton(_ sender: UIButton) {
+        translateText()
+        feedbackGenerator.notificationOccurred(.success)
+    }
     
     @IBAction func touchCopyButton(_ sender: Any) {
         let textToCopy = translatedText.text
         let pasteboard = UIPasteboard.general
         pasteboard.string = textToCopy
+        feedbackGenerator.notificationOccurred(.success)
         
     }
     
