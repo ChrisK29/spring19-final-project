@@ -11,7 +11,7 @@ import UIKit
 class TranslateViewController: UIViewController, UITextViewDelegate {
     
     let setLanguage = TranslateLanguage(selectedLanguage: "en", targetLanguage: "uz")
-    
+
     var savedList: [Saved] = []
     var store = UserDefaults.standard
     
@@ -49,11 +49,11 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
 
         let saved = Saved(original: textToTranslate, translated: changedText)
         self.savedList.append(saved)
+        
         let encoder = JSONEncoder()
         
         if let savedData = try? encoder.encode(self.savedList) {
             self.store.set(savedData, forKey: "savedList")
-//            tableView.reloadData()
         }
     }
     
@@ -121,6 +121,15 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        let decoder = JSONDecoder()
+        
+        if
+            let storedSavedData = store.data(forKey: "savedList"),
+            let savedList = try? decoder.decode(Array<Saved>.self, from: storedSavedData)
+        {
+            self.savedList = savedList
+        }
     }
     
     func textViewDidBeginEditing(_ userText: UITextView) {
