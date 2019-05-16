@@ -36,15 +36,15 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         
     }
     
+    var service: TranslateService = TranslateService()
+    
     func translateText() {
-        guard var textToTranslate = userText.text else { return }
-        
-        textToTranslate = textToTranslate.uppercased()
-        
-        translatedText.text = textToTranslate
-        let GoogleUrl = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + setLanguage.selectedLanguage + "&tl=" + setLanguage.targetLanguage + "&dt=t&dt=t&q=" + textToTranslate
-        
-        print(GoogleUrl)
+        guard let textToTranslate = userText.text,
+        let escapedString = textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        else { return }
+
+        service.getTranslation(from: setLanguage.selectedLanguage, to: setLanguage.targetLanguage, for: escapedString)  {textResult in
+            self.translatedText.text = textResult }
     }
     
     let placeholderForInput = "Enter text"

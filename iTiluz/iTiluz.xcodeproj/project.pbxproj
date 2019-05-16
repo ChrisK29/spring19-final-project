@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		958F23132A686969901F7B10 /* Pods_iTiluz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8D055063DB677727D226A1 /* Pods_iTiluz.framework */; };
+		CC06AA48228D27BD00CC81A9 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC06AA47228D27BD00CC81A9 /* TranslateService.swift */; };
 		CC2B980A228898D000CE55A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B9809228898D000CE55A4 /* AppDelegate.swift */; };
 		CC2B980C228898D000CE55A4 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B980B228898D000CE55A4 /* TranslateViewController.swift */; };
 		CC2B980E228898D000CE55A4 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B980D228898D000CE55A4 /* SavedViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		9C9A35426C4AF4BFA5FEE6EC /* Pods-iTiluz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTiluz.release.xcconfig"; path = "Target Support Files/Pods-iTiluz/Pods-iTiluz.release.xcconfig"; sourceTree = "<group>"; };
 		BA8D055063DB677727D226A1 /* Pods_iTiluz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTiluz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC06AA47228D27BD00CC81A9 /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
 		CC2B9806228898CF00CE55A4 /* iTiluz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTiluz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2B9809228898D000CE55A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC2B980B228898D000CE55A4 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				CC2B980B228898D000CE55A4 /* TranslateViewController.swift */,
 				CC2B980D228898D000CE55A4 /* SavedViewController.swift */,
 				CC788DEC2288E2C80014AFEA /* SettingsViewController.swift */,
+				CC06AA47228D27BD00CC81A9 /* TranslateService.swift */,
 				CC2B980F228898D000CE55A4 /* Main.storyboard */,
 				CC2B9812228898D100CE55A4 /* Assets.xcassets */,
 				CC2B9814228898D100CE55A4 /* LaunchScreen.storyboard */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC06AA48228D27BD00CC81A9 /* TranslateService.swift in Sources */,
 				CC2B980E228898D000CE55A4 /* SavedViewController.swift in Sources */,
 				CCAFFBBC228CBC810040E9D0 /* TranslateLanguage.swift in Sources */,
 				CC2B980A228898D000CE55A4 /* AppDelegate.swift in Sources */,
