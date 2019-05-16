@@ -13,8 +13,8 @@ English - Uzbek language translator & learner. The app UI will be based on my ow
 - [x] Online English - Uzbek & Uzbek - English translator. Home tab (8 hrs)
 - [x] Copy translation to clipboard. Home tab (1 hr)
 - [x] Share translation. Home tab (1 hr)
-- [ ] Save translation. Home tab (5 hrs)
-- [ ] Saved translations list screen. Saved tab (5 hr)
+- [x] Save translation. Home tab (5 hrs)
+- [x] Saved translations list screen. Saved tab (5 hr)
 
 ### Nice-to-have features
 
@@ -22,7 +22,7 @@ English - Uzbek language translator & learner. The app UI will be based on my ow
 - [ ] Firebase database of basic words setup for language learning (20)
 - [ ] Learn / practice saved translations (12 hrs)
 - [ ] Simple game to make learning fun (15 hrs)
-- [ ] Some settings tab with basic settings and general app information (2 hrs)
+- [x] Some settings tab with basic settings and general app information (2 hrs)
 
 ### Wireframes
 
