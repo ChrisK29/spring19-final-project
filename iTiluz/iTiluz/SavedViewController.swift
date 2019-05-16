@@ -10,53 +10,38 @@ import UIKit
 
 class SavedViewController: UIViewController, UITableViewDelegate {
 
+    var savedList: [Saved] = []
+    var store = UserDefaults.standard
+
     @IBOutlet weak var tableView: UITableView!
     
-    let cellID = "CellID"
-    
-    let originalText = ["Jahon", "Bill", "Zack", "Mary"]
-    
-    let translatedText = ["Sam", "Marc", "Lola"]
-    
-    let savedTextArray = [
-        ["Jahon", "Bill", "Zack", "Mary"],
-        ["Sam", "Marc", "Lola"],
-        ["Ben"]
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        
+        let decoder = JSONDecoder()
+        
+        if
+            let storedSavedData = store.data(forKey: "savedList"),
+            let savedList = try? decoder.decode(Array<Saved>.self, from: storedSavedData)
+        {
+            self.savedList = savedList
+        }
     }
 }
 
 extension SavedViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.text = "Header"
-        label.backgroundColor = UIColor.lightGray
-        return label
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return savedList.count
+
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return savedTextArray.count
-    }
-    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedTextArray[section].count
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath )
-//        let name = indexPath.section == 0 ? originalText[indexPath.row] : translatedText[indexPath.row]
-        
-        let name = savedTextArray[indexPath.section][indexPath.row]
-        
-        cell.textLabel?.text = name
+        let saved = savedList[indexPath.row]
+        let cell = UITableViewCell()
+        cell.textLabel?.text = saved.displayText
         return cell
     }
 }

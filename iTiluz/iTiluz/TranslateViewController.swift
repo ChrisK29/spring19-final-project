@@ -12,6 +12,9 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     let setLanguage = TranslateLanguage(selectedLanguage: "en", targetLanguage: "uz")
     
+    var savedList: [Saved] = []
+    var store = UserDefaults.standard
+    
     @IBOutlet weak var textInputView: UIView!
     
     @IBOutlet weak var textOutputView: UIView!
@@ -37,6 +40,21 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func touchSaveButton(_ sender: Any) {
+        guard let changedText = translatedText.text,
+             let textToTranslate = userText.text
+        else {
+            return
+        }
+    
+
+        let saved = Saved(original: textToTranslate, translated: changedText)
+        self.savedList.append(saved)
+        let encoder = JSONEncoder()
+        
+        if let savedData = try? encoder.encode(self.savedList) {
+            self.store.set(savedData, forKey: "savedList")
+//            tableView.reloadData()
+        }
     }
     
     @IBOutlet weak var saveButton: UIButton!
