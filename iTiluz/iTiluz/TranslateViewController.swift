@@ -44,15 +44,12 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     @IBAction func changeLangugageButton(_ sender: UIButton) {
         if leftLanguage.currentTitle == "English" {
              leftLanguage.setTitle("Uzbek", for: .normal)
+             rightLanguage.setTitle("English", for: .normal)
+             setLanguage.changeLanguage(to: "uz")
         } else {
              leftLanguage.setTitle("English", for: .normal)
-        }
-        
-        if rightLanguage.currentTitle == "Uzbek" {
-            rightLanguage.setTitle("English", for: .normal)
-        }
-        else {
-            rightLanguage.setTitle("Uzbek", for: .normal)
+             rightLanguage.setTitle("Uzbek", for: .normal)
+             setLanguage.changeLanguage(to: "en")
         }
     }
     

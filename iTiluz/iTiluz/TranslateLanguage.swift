@@ -9,11 +9,16 @@
 import Foundation
 
 class TranslateLanguage {
-    let selectedLanguage: String
-    let targetLanguage: String
+    var selectedLanguage: String
+    var targetLanguage: String
     
     init(selectedLanguage: String, targetLanguage: String) {
         self.selectedLanguage = selectedLanguage
         self.targetLanguage = targetLanguage
+    }
+    
+    func changeLanguage(to name: String) {
+        self.targetLanguage = self.selectedLanguage
+        self.selectedLanguage = name
     }
 }
