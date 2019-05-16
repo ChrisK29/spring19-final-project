@@ -42,12 +42,12 @@ class SavedViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+// MARK: - DataSource
 extension SavedViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedList.count
-
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let saved = savedList[indexPath.row]
