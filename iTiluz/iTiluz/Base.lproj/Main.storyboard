@@ -28,6 +28,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwT-6N-eGb">
                                         <rect key="frame" x="172.5" y="19" width="30" height="30"/>
                                         <state key="normal" image="changeButton"/>
+                                        <connections>
+                                            <action selector="changeLangugageButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hbS-vW-rou"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2U-ft-nD8">
                                         <rect key="frame" x="267" y="19" width="44" height="30"/>
@@ -136,6 +139,8 @@
                     <navigationItem key="navigationItem" title="iTiluz" id="GDA-hs-NZO"/>
                     <connections>
                         <outlet property="copyButton" destination="GeN-dC-8dw" id="dDe-yB-GJl"/>
+                        <outlet property="leftLanguage" destination="wcd-Ak-jfO" id="tdz-Io-tMg"/>
+                        <outlet property="rightLanguage" destination="j2U-ft-nD8" id="HRE-eb-38b"/>
                         <outlet property="translateButton" destination="JfX-3B-C1q" id="ive-tz-UDS"/>
                         <outlet property="translatedText" destination="jsG-1l-0g0" id="ldu-QU-c9Z"/>
                         <outlet property="userText" destination="62D-mv-A2g" id="aor-ex-rA0"/>

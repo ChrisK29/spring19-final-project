@@ -36,15 +36,36 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         
     }
     
+    @IBOutlet weak var leftLanguage: UIButton!
+    
+    
+    @IBOutlet weak var rightLanguage: UIButton!
+    
+    @IBAction func changeLangugageButton(_ sender: UIButton) {
+        if leftLanguage.currentTitle == "English" {
+             leftLanguage.setTitle("Uzbek", for: .normal)
+        } else {
+             leftLanguage.setTitle("English", for: .normal)
+        }
+        
+        if rightLanguage.currentTitle == "Uzbek" {
+            rightLanguage.setTitle("English", for: .normal)
+        }
+        else {
+            rightLanguage.setTitle("Uzbek", for: .normal)
+        }
+    }
+    
     var service: TranslateService = TranslateService()
     
     func translateText() {
         guard let textToTranslate = userText.text,
-        let escapedString = textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+              let escapedString = textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         else { return }
 
-        service.getTranslation(from: setLanguage.selectedLanguage, to: setLanguage.targetLanguage, for: escapedString)  {textResult in
-            self.translatedText.text = textResult }
+        service.getTranslation(from: setLanguage.selectedLanguage, to: setLanguage.targetLanguage, for: escapedString)  { textResult in
+            self.translatedText.text = textResult
+        }
     }
     
     let placeholderForInput = "Enter text"
