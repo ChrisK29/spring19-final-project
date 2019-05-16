@@ -16,6 +16,7 @@
 		CC2B9813228898D100CE55A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2B9812228898D100CE55A4 /* Assets.xcassets */; };
 		CC2B9816228898D100CE55A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2B9814228898D100CE55A4 /* LaunchScreen.storyboard */; };
 		CC788DED2288E2C80014AFEA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC788DEC2288E2C80014AFEA /* SettingsViewController.swift */; };
+		CC997148228DF796008A9EFD /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC997147228DF796008A9EFD /* Saved.swift */; };
 		CCAFFBBC228CBC810040E9D0 /* TranslateLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAFFBBB228CBC810040E9D0 /* TranslateLanguage.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		CC2B9815228898D100CE55A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC2B9817228898D100CE55A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC788DEC2288E2C80014AFEA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CC997147228DF796008A9EFD /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
 		CCAFFBBB228CBC810040E9D0 /* TranslateLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateLanguage.swift; sourceTree = "<group>"; };
 		E35087A1A014D5924EC77881 /* Pods-iTiluz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTiluz.debug.xcconfig"; path = "Target Support Files/Pods-iTiluz/Pods-iTiluz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				CC2B9809228898D000CE55A4 /* AppDelegate.swift */,
 				CC2B980B228898D000CE55A4 /* TranslateViewController.swift */,
 				CC2B980D228898D000CE55A4 /* SavedViewController.swift */,
+				CC997147228DF796008A9EFD /* Saved.swift */,
 				CC788DEC2288E2C80014AFEA /* SettingsViewController.swift */,
 				CC06AA47228D27BD00CC81A9 /* TranslateService.swift */,
 				CC2B980F228898D000CE55A4 /* Main.storyboard */,
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC06AA48228D27BD00CC81A9 /* TranslateService.swift in Sources */,
+				CC997148228DF796008A9EFD /* Saved.swift in Sources */,
 				CC2B980E228898D000CE55A4 /* SavedViewController.swift in Sources */,
 				CCAFFBBC228CBC810040E9D0 /* TranslateLanguage.swift in Sources */,
 				CC2B980A228898D000CE55A4 /* AppDelegate.swift in Sources */,

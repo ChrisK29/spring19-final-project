@@ -11,6 +11,16 @@ import UIKit
 class TranslateViewController: UIViewController, UITextViewDelegate {
     
     let setLanguage = TranslateLanguage(selectedLanguage: "en", targetLanguage: "uz")
+
+    var savedList: [Saved] = []
+    var store = UserDefaults.standard
+    
+    let feedbackGenerator = UINotificationFeedbackGenerator()
+
+    var service: TranslateService = TranslateService()
+
+    let placeholderForInput = "Enter text"
+
     
     @IBOutlet weak var textInputView: UIView!
     
@@ -24,25 +34,36 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var copyButton: UIButton!
     
-    
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var saveButton: UIButton!
+
     
     @IBAction func touchShareButton(_ sender: UIButton) {
         guard let shareText = translatedText.text else { return }
         
         let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
             present(vc, animated: true)
-        
     }
     
     @IBAction func touchSaveButton(_ sender: Any) {
+        guard let changedText = translatedText.text,
+             let textToTranslate = userText.text
+        else {
+            return
+        }
+    
+        let saved = Saved(original: textToTranslate, translated: changedText)
+        self.savedList.append(saved)
+        
+        let encoder = JSONEncoder()
+        
+        if let savedData = try? encoder.encode(self.savedList) {
+            self.store.set(savedData, forKey: "savedList")
+        }
+        feedbackGenerator.notificationOccurred(.success)
     }
     
-    @IBOutlet weak var saveButton: UIButton!
-    
-    let feedbackGenerator = UINotificationFeedbackGenerator()
-
     
     @IBAction func touchTranslateButton(_ sender: UIButton) {
         translateText()
@@ -74,8 +95,6 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    var service: TranslateService = TranslateService()
-    
     func translateText() {
         guard let textToTranslate = userText.text,
               let escapedString = textToTranslate.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
@@ -86,8 +105,6 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    let placeholderForInput = "Enter text"
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -103,6 +120,15 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        let decoder = JSONDecoder()
+        
+        if
+            let storedSavedData = store.data(forKey: "savedList"),
+            let savedList = try? decoder.decode(Array<Saved>.self, from: storedSavedData)
+        {
+            self.savedList = savedList
+        }
     }
     
     func textViewDidBeginEditing(_ userText: UITextView) {
