@@ -55,6 +55,7 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         if let savedData = try? encoder.encode(self.savedList) {
             self.store.set(savedData, forKey: "savedList")
         }
+        feedbackGenerator.notificationOccurred(.success)
     }
     
     @IBOutlet weak var saveButton: UIButton!
