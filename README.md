@@ -10,9 +10,9 @@ English - Uzbek language translator & learner. The app UI will be based on my ow
 
 ### Must-have features
 
-- [ ] Online English - Uzbek & Uzbek - English translator. Home tab (8 hrs)
-- [ ] Copy translation to clipboard. Home tab (1 hr)
-- [ ] Share translation. Home tab (1 hr)
+- [x] Online English - Uzbek & Uzbek - English translator. Home tab (8 hrs)
+- [x] Copy translation to clipboard. Home tab (1 hr)
+- [x] Share translation. Home tab (1 hr)
 - [ ] Save translation. Home tab (5 hrs)
 - [ ] Saved translations list screen. Saved tab (5 hr)
 

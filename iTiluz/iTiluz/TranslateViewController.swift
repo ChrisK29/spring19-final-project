@@ -20,6 +20,23 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var copyButton: UIButton!
     
+    
+    @IBOutlet weak var shareButton: UIButton!
+    
+    
+    @IBAction func touchShareButton(_ sender: UIButton) {
+        guard let shareText = translatedText.text else { return }
+        
+        let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+            present(vc, animated: true)
+        
+    }
+    
+    @IBAction func touchSaveButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var saveButton: UIButton!
+    
     let feedbackGenerator = UINotificationFeedbackGenerator()
 
     
@@ -72,6 +89,8 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
         // Do any additional setup after loading the view.
         customizeButton(buttonName: copyButton, imageName: "copyButton", buttonColor: 0xffffff)
         customizeButton(buttonName: translateButton, imageName: "translateButton", buttonColor: 0x374FF5)
+        customizeButton(buttonName: shareButton, imageName: "shareButton", buttonColor: 0xffffff)
+        customizeButton(buttonName: saveButton, imageName: "saved", buttonColor: 0xffffff)
         userText.delegate = self
         userText.text = placeholderForInput
         userText.textColor = UIColor.lightGray

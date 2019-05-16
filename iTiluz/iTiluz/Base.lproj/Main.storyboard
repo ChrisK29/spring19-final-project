@@ -98,11 +98,29 @@
                                                     <action selector="touchCopyButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3A2-sp-P4M"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2d-MQ-419">
+                                                <rect key="frame" x="252" y="8" width="30" height="30"/>
+                                                <state key="normal" image="shareButton"/>
+                                                <connections>
+                                                    <action selector="touchShareButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Knk-OL-LgS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDp-fO-egX">
+                                                <rect key="frame" x="207" y="8" width="30" height="30"/>
+                                                <state key="normal" image="saved"/>
+                                                <connections>
+                                                    <action selector="touchSaveButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="c6n-0i-Bvd"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2156862745" green="0.30980392159999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="GeN-dC-8dw" secondAttribute="trailing" constant="8" id="4se-L2-ojn"/>
+                                            <constraint firstItem="J2d-MQ-419" firstAttribute="leading" secondItem="KDp-fO-egX" secondAttribute="trailing" constant="15" id="Bcp-ro-m2Q"/>
+                                            <constraint firstItem="J2d-MQ-419" firstAttribute="top" secondItem="EJw-db-pRX" secondAttribute="top" constant="8" id="E53-dg-xHN"/>
                                             <constraint firstItem="jsG-1l-0g0" firstAttribute="leading" secondItem="EJw-db-pRX" secondAttribute="leadingMargin" id="EIz-Vr-xmf"/>
+                                            <constraint firstItem="GeN-dC-8dw" firstAttribute="leading" secondItem="J2d-MQ-419" secondAttribute="trailing" constant="15" id="KEO-yB-y4k"/>
+                                            <constraint firstItem="KDp-fO-egX" firstAttribute="top" secondItem="EJw-db-pRX" secondAttribute="top" constant="8" id="bUX-g1-2dh"/>
                                             <constraint firstItem="GeN-dC-8dw" firstAttribute="top" secondItem="EJw-db-pRX" secondAttribute="top" constant="8" id="h4D-4P-Lee"/>
                                             <constraint firstAttribute="height" constant="196" id="l9T-wt-aL8"/>
                                             <constraint firstAttribute="bottom" secondItem="jsG-1l-0g0" secondAttribute="bottom" constant="8" id="oe0-xt-IYg"/>
@@ -141,6 +159,8 @@
                         <outlet property="copyButton" destination="GeN-dC-8dw" id="dDe-yB-GJl"/>
                         <outlet property="leftLanguage" destination="wcd-Ak-jfO" id="tdz-Io-tMg"/>
                         <outlet property="rightLanguage" destination="j2U-ft-nD8" id="HRE-eb-38b"/>
+                        <outlet property="saveButton" destination="KDp-fO-egX" id="JhG-44-0Z8"/>
+                        <outlet property="shareButton" destination="J2d-MQ-419" id="Rfu-lj-Fhh"/>
                         <outlet property="translateButton" destination="JfX-3B-C1q" id="ive-tz-UDS"/>
                         <outlet property="translatedText" destination="jsG-1l-0g0" id="ldu-QU-c9Z"/>
                         <outlet property="userText" destination="62D-mv-A2g" id="aor-ex-rA0"/>
@@ -299,6 +319,7 @@
         <image name="copyButton" width="30" height="30"/>
         <image name="saved" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
+        <image name="shareButton" width="30" height="30"/>
         <image name="translate" width="30" height="30"/>
         <image name="translateButton" width="30" height="30"/>
     </resources>
