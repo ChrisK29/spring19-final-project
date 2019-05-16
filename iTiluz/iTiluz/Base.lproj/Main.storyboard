@@ -161,6 +161,8 @@
                         <outlet property="rightLanguage" destination="j2U-ft-nD8" id="HRE-eb-38b"/>
                         <outlet property="saveButton" destination="KDp-fO-egX" id="JhG-44-0Z8"/>
                         <outlet property="shareButton" destination="J2d-MQ-419" id="Rfu-lj-Fhh"/>
+                        <outlet property="textInputView" destination="W40-AE-DPH" id="bZS-kq-8n1"/>
+                        <outlet property="textOutputView" destination="EJw-db-pRX" id="Hrn-U0-dAW"/>
                         <outlet property="translateButton" destination="JfX-3B-C1q" id="ive-tz-UDS"/>
                         <outlet property="translatedText" destination="jsG-1l-0g0" id="ldu-QU-c9Z"/>
                         <outlet property="userText" destination="62D-mv-A2g" id="aor-ex-rA0"/>

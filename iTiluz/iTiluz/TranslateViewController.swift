@@ -12,6 +12,10 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     
     let setLanguage = TranslateLanguage(selectedLanguage: "en", targetLanguage: "uz")
     
+    @IBOutlet weak var textInputView: UIView!
+    
+    @IBOutlet weak var textOutputView: UIView!
+    
     @IBOutlet weak var userText: UITextView!
     
     @IBOutlet weak var translatedText: UITextView!
@@ -87,6 +91,8 @@ class TranslateViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        textInputView.layer.cornerRadius = 10
+        textOutputView.layer.cornerRadius = 10
         customizeButton(buttonName: copyButton, imageName: "copyButton", buttonColor: 0xffffff)
         customizeButton(buttonName: translateButton, imageName: "translateButton", buttonColor: 0x374FF5)
         customizeButton(buttonName: shareButton, imageName: "shareButton", buttonColor: 0xffffff)
