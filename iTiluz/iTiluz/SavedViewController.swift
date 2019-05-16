@@ -29,6 +29,17 @@ class SavedViewController: UIViewController, UITableViewDelegate {
             self.savedList = savedList
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        let decoder = JSONDecoder()
+        
+        if
+            let storedSavedData = store.data(forKey: "savedList"),
+            let savedList = try? decoder.decode(Array<Saved>.self, from: storedSavedData)
+        {
+            self.savedList = savedList
+        }
+        tableView.reloadData()
+    }
 }
 
 extension SavedViewController: UITableViewDataSource {
