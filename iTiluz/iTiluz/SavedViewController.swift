@@ -53,7 +53,35 @@ extension SavedViewController: UITableViewDataSource {
         let saved = savedList[indexPath.row]
         let cell = UITableViewCell()
         cell.textLabel?.text = saved.displayText
+        cell.textLabel?.numberOfLines = 0
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView,leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+        let closeAction = UIContextualAction(style: .normal, title:  "Close", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            print("Copy")
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            UIPasteboard.general.string = cell?.textLabel?.text
+            
+            success(true)
+        })
+        closeAction.title = "Copy"
+        closeAction.backgroundColor = UIColor(rgb: 0xfc5185)
+        
+        return UISwipeActionsConfiguration(actions: [closeAction])
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
     }
 }
 
