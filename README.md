@@ -36,6 +36,8 @@ English - Uzbek language translator & learner. The app UI will be based on my ow
 ```
 git clone https://github.com/csc-690-sfsu/spring19-final-project
 
+cd spring19-final-project
+
 cd iTiluz
 
 xed .
